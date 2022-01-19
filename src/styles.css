@@ -90,7 +90,7 @@ section {
     color: #141c3a;
     font-weight: 300;
     animation-name: show_tacos;
-    animation-duration: 8s; 
+    animation-duration: 5s; 
     animation-fill-mode: forwards;
 }
 
