@@ -21,20 +21,25 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 1.5rem 3.5rem;
   background-color: white;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
+.navigation {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
 
 .nav-link {
   color: #783ad6;
+  font-weight: 500;
   font-size: 18px;
   text-decoration: none;
-  vertical-align: text-top;
 }
 
 .nav-link:hover {
@@ -45,12 +50,10 @@ nav {
 nav ul {
   display: flex;
   gap: 1.9rem;
-  text-align: center;
 }
 
 /* Say Hello Button Format */
 .cta {
-    
   background-color: transparent;
   border-width: 2px;
   font-weight: 500;
@@ -63,7 +66,6 @@ nav ul {
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
-
 
 .cta:hover {
   color: white;
