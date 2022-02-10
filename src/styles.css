@@ -33,6 +33,7 @@ nav {
   padding: 1.5rem 3.5rem;
   background-color: white;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 /* Navbar Links */
@@ -130,6 +131,7 @@ nav ul {
 }
 
 .tacos {
+  z-index: 0;
   font-size: 3.5rem;
   text-align: center;
   color: #141c3a;
@@ -161,6 +163,34 @@ nav ul {
   100% { transform: translateY(0); }
 }
 
+/* Skills */
+.skills {
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.skill-header {
+  margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.icon {
+  width: 11.875rem;
+  height: 11.25rem;
+}
+
+.icon-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px #141c3a;
+  padding: 20px;
+  margin: 10px;
+}
 
 /* Footer */
 .footer {
