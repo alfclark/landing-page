@@ -25,7 +25,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem 3.5rem;
-  background-color: var(--bg-color);
+  background-color: white;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -39,7 +39,7 @@ nav a {
 
 nav a:hover {
   color: #141c3a;
-  border-bottom: 2px solid var(--secondary-color);
+  border-bottom: 2px solid #141c3a;
 }
 
 nav ul {
@@ -51,23 +51,24 @@ nav ul {
 
 /* Say Hello Button Format */
 .cta {
-    background-color: transparent;
-    border-width: 2px;
-    font-weight: 500;
-    font-size: 18px;
-    padding: 9px 25px;
-    color: #783ad6;
-    border-color: #783ad6;
-    border-radius: 50px;
-    border-style: solid;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+    
+  background-color: transparent;
+  border-width: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 9px 25px;
+  color: #783ad6;
+  border-color: #783ad6;
+  border-radius: 50px;
+  border-style: solid;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
 
 
 .cta:hover {
-    color: white;
-    background-color: #783ad6;
+  color: white;
+  background-color: #783ad6;
 }
 
 /**DDFDFDFDF*/
@@ -137,63 +138,26 @@ section {
 }
 
 @keyframes bounce1 {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
 }
 
-.about_me {
-    background-color: #783ad6;
-    height: 100vh;
-    display: block;
-}
 
-.call_me {
-    font-size: 30px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    padding-top: 50px;
-}
-
-.this_is_me {
-    font-size: 24px;
-    text-align: center;
-    color: white;
-    font-weight: lighter;
-    padding-top: 20px;        
-}
-
-.scroll_me_white {
-    padding-top: 100px;
-    font-size: 15px;
-    text-align: center;
-    color: white;
-    animation-name: bounce1;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes bounce1 {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-50px); }
-    100% { transform: translateY(0); }
-}
-
+/* Footer */
 .footer {
-    height: 100%;
-    background-color: #783ad6;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  background-color: #783ad6;
+  display: flex;
+  flex-direction: column;
 }
-
 
 .footer_logo {
-    height: 80px;
-    width: 80px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 
 /* Scroll to top button */
@@ -209,15 +173,15 @@ section {
   height: 4rem;
   fill: #141c3a;
 }
-/* Scroll to top button ends */
 
+/* Credits */
 .by_me {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.863);
-    font-weight: 500;
-    font-size: 12px;
-    padding-top: 60px;
-    padding-bottom: 20px;
-    text-decoration: none;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.863);
+  font-weight: 500;
+  font-size: 12px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  text-decoration: none;
 
 }
