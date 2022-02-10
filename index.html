@@ -12,67 +12,110 @@
 </head>
 <body>
 <!-- Header -->
-    <nav>
-      <h1 class="logo">AC</h1>
+  <nav>
+    <h1 class="logo">AC</h1>
 <!-- NavBar -->
-      <div class="nav-links">
-        <ul class="navigation">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="Pages/contact.html"><button class="cta">Say Hello!</button></a></li>
-        </ul>
-      </div>      
-    </nav>
+    <div class="nav-links">
+      <ul class="navigation">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="Pages/contact.html"><button class="cta">Say Hello!</button></a></li>
+      </ul>
+    </div>      
+  </nav>
 
 <!-- Welcome Section -->
-      <div class="container">
-        <section id="about" class="hero">
-            <img class="avatar" src="Images/MyAvatar.png">
-            <h1 class="my_name">Alfredo Clark</h1>
-            <h2 class="job_desc">Web Developer</h2>
-            <h3 class="me">I am a self taught web developer. I love coding amazing websites.</h3>
-            <h3 class="tacos"> ...and Tacos.</h3>
-            <!--<div class="scroll_me">
-                <p class="scroll_text">Don't be shy, scroll me :)</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
-            </div>-->
-        </section>
-      </div>
-      
+  <div class="container">
+    <section id="about" class="hero">
+        <img class="avatar" src="Images/MyAvatar.png">
+        <h1 class="my_name">Alfredo Clark</h1>
+        <h2 class="job_desc">Web Developer</h2>
+        <h3 class="me">I am a self taught web developer. I love coding amazing websites.</h3>
+        <h3 class="tacos"> ...and Tacos.</h3>
+        <!--<div class="scroll_me">
+            <p class="scroll_text">Don't be shy, scroll me :)</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
+        </div>-->
+    </section>
+  </div>
+
 <!-- About me -->
-    <div class="container">
-        <section id="about-me" class="about-me">
-          <h1 class="about-title">About Me</h1>
-          <p class="about-text">I am a Mechatronics Engineer and a self taught Web Developer with a passion for 
-            making beautiful and responsive web applications and websites.
+  <div class="container">
+      <section id="about-me" class="about-me">
+        <h1 class="about-title">About Me</h1>
+        <p class="about-text">I am a Mechatronics Engineer and a self taught Web Developer with a passion for 
+          making beautiful and responsive web applications and websites.
 
-          </p>
-          <p>In my spare time I like to play videogames, cooking and making music. I also love to
-            share time with my family and friends.             
-          </p>
-          <h1 class="skills-title">Skills</h1>
-          <div class="skills-container">
-            <div></div>
-            <div><i class="fab fa-html5"></i></div>
+        </p>
+        <p>In my spare time I like to play videogames, cooking and making music. I also love to
+          share time with my family and friends.             
+        </p>
+      </section>
+  </div>
 
-          </div>
-        </section>
+<!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2 class="skill-header">My Top Skills</h2>
+
+    <div class="skills-wrapper">
+      <div class="first-set animate__animated animate__pulse">
+        <img
+          src="Images/icons8-javascript.svg"
+          alt=""
+          loading="lazy"
+          class="icon icon-card"
+        />
+        <img
+          src="Images/icons8-html-5.svg"
+          alt=""
+          loading="lazy"
+          class="icon icon-card"
+        />
+        <img
+          src="Images/icons8-css3.svg"
+          alt=""
+          loading="lazy"
+          class="icon icon-card"
+        />
+      </div>
+
+      <div class="second-set animate__animated animate__pulse">
+        <img
+          src="Images/icons8-react-native.svg"
+          alt=""
+          loading="lazy"
+          class="icon icon-card"
+        />
+        <img
+          src="Images/icons8-git.svg"
+          alt=""
+          loading="lazy"
+          class="icon icon-card"
+        />
+        <img
+          src="Images/icons8-bootstrap.svg"
+          alt=""
+          loading="lazy"
+          class="icon icon-card"
+        />
+      </div>
     </div>
+  </section>
 
 <!-- Scroll to top -->
-<i class="scroll-up" id="scroll-up">
-  <svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM390.6 310.6c-12.5 12.5-32.75 12.5-45.25 0L256 221.3L166.6 310.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l112-112C239.6 147.1 247.8 144 256 144s16.38 3.125 22.62 9.375l112 112C403.1 277.9 403.1 298.1 390.6 310.6z"/></svg>
-</i>
+  <i class="scroll-up" id="scroll-up">
+    <svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM390.6 310.6c-12.5 12.5-32.75 12.5-45.25 0L256 221.3L166.6 310.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l112-112C239.6 147.1 247.8 144 256 144s16.38 3.125 22.62 9.375l112 112C403.1 277.9 403.1 298.1 390.6 310.6z"/></svg>
+  </i>
 
 <!-- Project Section -->
 
 
 <!-- Footer -->
-    <footer class="footer">
-        <img class="footer_logo" src="Images/MyAvatar.png" alt="logo"> 
-        <h2 class="by_me">2021. Handcrafted by me.</h2>
-    </footer>
+  <footer class="footer">
+      <img class="footer_logo" src="Images/MyAvatar.png" alt="logo"> 
+      <h2 class="by_me">2021. Handcrafted by me.</h2>
+  </footer>
 </body>
 
 <!-- Website Scripts -->
