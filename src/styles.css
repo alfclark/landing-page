@@ -10,8 +10,58 @@ html {
 }
 
 body {
+  color: #fff;
+  background: 50%/contain url(/Images/universe.png) #141c3a;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+.subtitle {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+}
+
+
+/*---------------ANIMATIONS----------------*/
+@keyframes bounce1 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes shake1 {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-2px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateX(2px);
+  }
+
+  80% {
+    transform: translateX(1px);
+  }
+
+  90% {
+    transform: translateX(-1px);
+  }
+}
+
+@keyframes show1 {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
 
 /* NAVBAR */
 ul {
@@ -20,7 +70,6 @@ ul {
 
 .logo {
   font-size: 3rem;
-  color: #783ad6;
 }
 
 nav {
@@ -31,8 +80,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 3.5rem;
-  background-color: white;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
 
@@ -44,15 +91,14 @@ nav {
 }
 
 .nav-link {
-  color: #783ad6;
+  color: #fff;
   font-weight: 500;
   font-size: 1.75rem;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  color: #141c3a;
-  border-bottom: 2px solid #141c3a;
+  border-bottom: 2px solid #fff;
 }
 
 nav ul {
@@ -60,46 +106,47 @@ nav ul {
   gap: 1.9rem;
 }
 
+/*
 .burger-menu {
-  color: #783ad6;
   font-size: 2rem;
   border: 0;
   background-color: transparent;
   cursor: pointer;
   display: none;
 }
+*/
 
 /* Say Hello Button Format */
 .cta {
+  color: #fff;
   background-color: transparent;
   border-width: 2px;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 9px 25px;
-  color: #783ad6;
-  border-color: #783ad6;
   border-radius: 50px;
   border-style: solid;
+  border-color: #fff;
   cursor: pointer;
-  transition: all 0.3s ease 0s;
 }
 
 .cta:hover {
+  transition: all 0.3s ease 0s;
   color: white;
   background-color: #783ad6;
+  border-color: #783ad6;
 }
 
 /* Welcome */
 .hero {
+  display:flow-root;
   height: 100vh;
   width: 100%;
-  background-color: white;
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
   margin: auto;
 }
-
 
 .avatar {
   display: block;
@@ -108,25 +155,21 @@ nav ul {
   width: 20%;
 }
 
-
 .my_name {
   font-size: 5rem;
   text-align: center;
-  color: #141c3a;
   font-weight: 600;
 }
 
 .job_desc {
   font-size: 3rem;
   text-align: center;
-  color: #141c3a;
   font-weight: normal;
 }
 
 .me {
   font-size: 3.5rem;
   text-align: center;
-  color: #141c3a;
   font-weight: 300;
 }
 
@@ -134,16 +177,10 @@ nav ul {
   z-index: 0;
   font-size: 3.5rem;
   text-align: center;
-  color: #141c3a;
   font-weight: 300;
-  animation-name: show_tacos;
+  animation-name: show1;
   animation-duration: 5s; 
   animation-fill-mode: forwards;
-}
-
-@keyframes show_tacos {
-  from{opacity: 0;}
-  to{opacity: 1;}
 }
 
 /* Scroll me */
@@ -151,21 +188,38 @@ nav ul {
   font-size: 15px;
   text-align: center;
   justify-content: center;
-  color: #141c3a;
-  animation-name: bounce1;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation: bounce1 2s infinite, show1 5s forwards;
 }
 
-@keyframes bounce1 {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-20px); }
-  100% { transform: translateY(0); }
+.arrow-scroll {
+  fill: #fff;
+}
+
+/* About Me */
+.container-about {
+  display: flex;
+  width: 100rem;
+  margin: 0 auto;
+}
+.about-me {
+  background-color: #783ad6;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  border: #783ad6;
+  border-style: solid;
+  border-radius: 11px;
+}
+
+.about-text {
+  font-size: 2rem;
+  margin: 1rem;
 }
 
 /* Skills */
 .skills {
-  max-width: 68.75rem;
+  max-width: 100rem;
   margin: auto;
   text-align: center;
   margin-top: 2.5rem;
@@ -180,17 +234,29 @@ nav ul {
 }
 
 .icon {
-  width: 11.875rem;
-  height: 11.25rem;
+  width: 15.875rem;
+  height: 15.25rem;
+}
+
+.icon:hover {
+  animation: shake1 2s ease 0s 1 normal forwards;
 }
 
 .icon-card {
   background-color: #fff;
   border-radius: 11px;
-  box-shadow: 0 3px 10px #141c3a;
+  box-shadow: 0 10px 10px #783ad6;
   padding: 20px;
   margin: 10px;
 }
+
+.icon-card:hover {
+  box-shadow: 0 0;
+  border-color: #783ad6;
+  border-style: solid;
+  border-width: 5px;
+}
+
 
 /* Footer */
 .footer {
@@ -209,21 +275,20 @@ nav ul {
 }
 
 /* Scroll to top button */
-.scroll-up {
+.fa-circle-up {
   position: fixed;
   right: 2%;
   bottom: 5%;
   cursor: pointer;
+  animation-name: bounce1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  color: #fff;
+  font-size: 4rem;
 }
 
-.up-arrow {
-  width: 4rem;
-  height: 4rem;
-  fill: #6d54ff;
-}
-
-.up-arrow:hover {
-  fill: #141c3a;
+.fa-circle-up:hover {
+  transition: all 0.3s ease 0s;
 }
 
 /* Credits */
