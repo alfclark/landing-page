@@ -219,6 +219,10 @@ nav ul {
 .up-arrow {
   width: 4rem;
   height: 4rem;
+  fill: #6d54ff;
+}
+
+.up-arrow:hover {
   fill: #141c3a;
 }
 
@@ -231,5 +235,4 @@ nav ul {
   padding-top: 60px;
   padding-bottom: 20px;
   text-decoration: none;
-
 }
