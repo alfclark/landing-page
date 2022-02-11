@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="src/app.js">
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
     <title>Alfredo Clark | Front-end Developer</title>
+    <script src="https://kit.fontawesome.com/ad0e4b5002.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!-- Header -->
@@ -33,31 +34,38 @@
         <h2 class="job_desc">Web Developer</h2>
         <h3 class="me">I am a self taught web developer. I love coding amazing websites.</h3>
         <h3 class="tacos"> ...and Tacos.</h3>
-        <!--<div class="scroll_me">
+        <div class="scroll_me">
             <p class="scroll_text">Don't be shy, scroll me :)</p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
-        </div>-->
+            <svg class="arrow-scroll" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
+        </div>
     </section>
   </div>
 
 <!-- About me -->
-  <div class="container">
-      <section id="about" class="about-me">
-        <h1 class="about-title">About Me</h1>
-        <p class="about-text">I am a Mechatronics Engineer and a self taught Web Developer with a passion for 
-          making beautiful and responsive web applications and websites.
-
-        </p>
-        <p>In my spare time I like to play videogames, cooking and making music. I also love to
-          share time with my family and friends.             
-        </p>
+  <section class="about">
+    <div id="about" class="container-about">
+      <section class="about-me">
+        <div class="this-is-me">
+          <h1 class="subtitle">About Me</h1>
+          <p class="about-text">Hello my name is Alfredo Clark and I am a self taught Web Developer 
+              with a passion for making beautiful and responsive web applications and websites.
+          </p>
+          <p class="about-text">
+            I like to learn new technologies and use them to deploy better web applications.
+          </p>
+          <p class="about-text">In my spare time I like to play videogames, cooking and making music. I also love to
+            share time with my family and friends.             
+          </p>
+        </div>
       </section>
   </div>
+  </section>
+  
 
 <!-- Skills Section -->
-  <section class="skills" id="skills">
-    <h2 class="skill-header">My Top Skills</h2>
-
+  <section id="skills" class="container">
+    <div class="skills">
+      <h1 class="subtitle">My Top Skills</h1>
     <div class="skills-wrapper">
       <div class="first-set animate__animated animate__pulse">
         <img
@@ -101,15 +109,18 @@
         />
       </div>
     </div>
+    </div>
   </section>
 
 <!-- Scroll to top -->
-  <i class="scroll-up" id="scroll-up">
-    <svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM390.6 310.6c-12.5 12.5-32.75 12.5-45.25 0L256 221.3L166.6 310.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l112-112C239.6 147.1 247.8 144 256 144s16.38 3.125 22.62 9.375l112 112C403.1 277.9 403.1 298.1 390.6 310.6z"/></svg>
-  </i>
-  
+    <i id="scroll-up" class="fa-regular fa-circle-up"></i>
+    
 <!-- Project Section -->
-
+  <section id="projects" class="container">
+    <div class="">
+      <h1 class="subtitle">My Projects</h1>
+    </div>
+  </section>
 
 <!-- Footer -->
   <footer class="footer">
@@ -118,6 +129,5 @@
   </footer>
 </body>
 
-<!-- Website Scripts -->
 <script src="src/app.js"></script>
 </html>
