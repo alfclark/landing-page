@@ -21,6 +21,14 @@ body {
   padding-top: 2rem;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  width: 10%;
+  position: relative;
+  margin: 1rem auto;
+  background-color: #fff;
+}
 
 /*---------------ANIMATIONS----------------*/
 @keyframes bounce1 {
@@ -62,6 +70,54 @@ body {
   to{opacity: 1;}
 }
 
+@keyframes entrance1 {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(-65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(-28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+}
+/*----------------END OF ANIMATIONS--------------------*/
+
+.container{
+  display: block;
+}
 
 /* NAVBAR */
 ul {
@@ -73,6 +129,7 @@ ul {
 }
 
 nav {
+  background-color: #783ad6;
   position: sticky;
   top: 0;
   left: 0;
@@ -81,6 +138,7 @@ nav {
   justify-content: space-between;
   padding: 1.5rem 3.5rem;
   z-index: 1;
+  box-shadow: 0 0 20px #fff;
 }
 
 /* Navbar Links */
@@ -93,12 +151,13 @@ nav {
 .nav-link {
   color: #fff;
   font-weight: 500;
-  font-size: 1.75rem;
+  font-size: 2rem;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  border-bottom: 2px solid #fff;
+  color: #141c3a;
+  border-bottom: 2px solid #141c3a;
 }
 
 nav ul {
@@ -133,19 +192,24 @@ nav ul {
 .cta:hover {
   transition: all 0.3s ease 0s;
   color: white;
-  background-color: #783ad6;
-  border-color: #783ad6;
+  background-color: #141c3a;
 }
 
 /* Welcome */
 .hero {
-  display:flow-root;
+  display:  block;
   height: 100vh;
   width: 100%;
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
   margin: auto;
+  position: relative;
+  animation: entrance1 1s ease 0s 1 normal forwards;
+}
+
+.welcome {
+  padding-top: 7rem;
 }
 
 .avatar {
@@ -153,6 +217,10 @@ nav ul {
   margin-left: auto;
   margin-right: auto;
   width: 20%;
+}
+
+.avatar:hover {
+  animation: shake1 2s ease 0s 1 normal forwards;
 }
 
 .my_name {
@@ -165,6 +233,7 @@ nav ul {
   font-size: 3rem;
   text-align: center;
   font-weight: normal;
+  text-decoration: underline;
 }
 
 .me {
@@ -184,45 +253,63 @@ nav ul {
 }
 
 /* Scroll me */
-.scroll_me {
-  font-size: 15px;
+.scroll-me {
+  font-size: 1.5rem;
   text-align: center;
   justify-content: center;
   animation: bounce1 2s infinite, show1 5s forwards;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .arrow-scroll {
   fill: #fff;
+  height: 1rem;
 }
 
 /* About Me */
 .container-about {
-  display: flex;
-  width: 100rem;
-  margin: 0 auto;
-}
-.about-me {
-  background-color: #783ad6;
-  display: flex;
-  align-items: center;
+  background-color: #783ad681;
   text-align: center;
   color: #fff;
   border: #783ad6;
   border-style: solid;
   border-radius: 11px;
+  width: 100%;
+  max-width: 100vh;
+  margin: 0 auto;
 }
-
+.sub-about {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+}
 .about-text {
   font-size: 2rem;
   margin: 1rem;
 }
 
+.social {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.social-icon {
+  padding: 1rem;
+  font-size: 4rem;
+  color: #fff;
+}
+
+.social-icon:hover {
+  color: #141c3a;
+}
+
 /* Skills */
 .skills {
-  max-width: 100rem;
-  margin: auto;
+  max-width: 100%;
+  margin-top: 10rem;
   text-align: center;
-  margin-top: 2.5rem;
 }
 
 .skill-header {
@@ -257,21 +344,89 @@ nav ul {
   border-width: 5px;
 }
 
+/* PROJECT SECTION*/
 
-/* Footer */
-.footer {
+.projects-section {
+  margin-top: 10rem;
+  display: block;
+  text-align: center;
+  align-items: center;
   height: 100%;
-  background-color: #783ad6;
-  display: flex;
-  flex-direction: column;
 }
 
-.footer_logo {
-  height: 80px;
-  width: 80px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+}
+
+/* "Automagic" image grid using no media queries */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project {
+  background: #783ad6;
+  border-radius: 11px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.project:hover {
+  background-color: #141c3a;
+  transform: translate(0, 10px);
+}
+
+.code {
+  color: transparent;
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+  color: #ff7f50;
+  text-decoration: underline;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+  border-radius: 11px 11px 0 0;
+}
+
+.project-title {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 2rem 0.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.project:hover .project-title {
+  color: #ff7f50;
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
 }
 
 /* Scroll to top button */
@@ -289,6 +444,22 @@ nav ul {
 
 .fa-circle-up:hover {
   transition: all 0.3s ease 0s;
+}
+
+/* Footer */
+.footer {
+  height: 100%;
+  background-color: #783ad6;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_logo {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 
 /* Credits */
