@@ -120,12 +120,14 @@ hr {
 }
 
 /* NAVBAR */
-ul {
+nav ul {
+  display: flex;
   list-style-type: none;
 }
 
 .logo {
   font-size: 3rem;
+  font-weight: bold;
 }
 
 nav {
@@ -139,6 +141,10 @@ nav {
   padding: 1.5rem 3.5rem;
   z-index: 1;
   box-shadow: 0 0 20px #fff;
+}
+
+nav a {
+  transition: 0.3s;
 }
 
 /* Navbar Links */
@@ -165,15 +171,44 @@ nav ul {
   gap: 1.9rem;
 }
 
-/*
+nav ul.show {
+  transform: translateX(0);
+}
+
+.burger {
+  margin: 0 0 0 0;
+}
+
 .burger-menu {
-  font-size: 2rem;
+  color: #fff;
+  font-size: 3rem;
   border: 0;
   background-color: transparent;
   cursor: pointer;
   display: none;
+  text-decoration: none;
 }
-*/
+
+.burger-menu:hover {
+  color: #141c3a;
+}
+
+.burger-list {
+  display: none;
+}
+
+@media screen and (max-width: 760px) {
+  .nav-link {
+    display: none;
+  }  
+  .burger-menu{
+    display: flex;
+  }
+  .cta {
+    display: none;
+  }
+}
+
 
 /* Say Hello Button Format */
 .cta {
@@ -187,12 +222,14 @@ nav ul {
   border-style: solid;
   border-color: #fff;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .cta:hover {
   transition: all 0.3s ease 0s;
   color: white;
   background-color: #141c3a;
+  text-decoration: none;
 }
 
 /* Welcome */
@@ -472,3 +509,4 @@ nav ul {
   padding-bottom: 20px;
   text-decoration: none;
 }
+
