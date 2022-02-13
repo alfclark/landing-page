@@ -14,4 +14,11 @@ scrollUp.addEventListener("click", () => {
 });
 
 // Function burger
-
+function burgerFunction() {
+  var x = document.getElementById("burger-list");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
