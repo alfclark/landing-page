@@ -15,7 +15,7 @@
 <body>    
   
 <!-- Header -->
-  <nav>
+  <nav class="top">
     <a class="logo">AC</a>
 <!-- NavBar -->        
     <div>
@@ -27,16 +27,16 @@
       </ul>
     </div>
     <div class="burger">
-      <button id="button-burger" class="burger-menu"><i class="fa-solid fa-bars" name="menu-outline"></i></button>
+      <button onclick="burgerFunction()" id="button-burger" class="burger-menu"><i class="fa-solid fa-bars" name="menu-outline"></i></button>
+      <div id="burger-list" class="burger-list">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="Pages/contact.html">Contact Me</a>
+      </div> 
     </div>
     
   </nav>
-  <div class="burger-list">
-      <a href="#about" class="nav-link">About</a>
-      <a href="#skills" class="nav-link">Skills</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="Pages/contact.html">Contact Me</a>
-  </div>
   
 <!-- Welcome Section -->
   <div class="container">
