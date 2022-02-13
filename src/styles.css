@@ -177,6 +177,7 @@ nav ul.show {
 
 .burger {
   margin: 0 0 0 0;
+  display: inline;
 }
 
 .burger-menu {
@@ -189,9 +190,6 @@ nav ul.show {
   text-decoration: none;
 }
 
-.burger-menu:hover {
-  color: #141c3a;
-}
 
 .burger-list {
   display: none;
