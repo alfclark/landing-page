@@ -30,6 +30,11 @@ hr {
   background-color: #fff;
 }
 
+a {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
 /*---------------ANIMATIONS----------------*/
 @keyframes bounce1 {
   0%   { transform: translateY(0); }
@@ -139,7 +144,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 3.5rem;
-  z-index: 1;
+  z-index: 2;
   box-shadow: 0 0 20px #fff;
 }
 
@@ -190,21 +195,60 @@ nav ul.show {
   text-decoration: none;
 }
 
+.burger-menu-list {
+  display: none;
+  position: fixed;
+  top: 6.8rem;
+  right: 0;
+  list-style-type: none;
+  background-color: #783ad6;
+  z-index: 1;
+  text-align: center;
+  margin-left: 50px;
+  padding-bottom: 1rem;
+}
+
+.burger-link{
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+ .burger-link:hover {
+   color: #141c3a;
+   text-decoration: underline;
+ }
 
 .burger-list {
   display: none;
 }
 
 @media screen and (max-width: 760px) {
+  nav {
+    box-shadow: none;
+  }
   .nav-link {
     display: none;
   }  
   .burger-menu{
     display: flex;
   }
+  .burger-menu-list {
+    display:block;
+  }
   .cta {
     display: none;
   }
+}
+
+@media screen and (min-width: 760px) {
+  .burger-list {
+    display: none;
+  }
+  
 }
 
 
