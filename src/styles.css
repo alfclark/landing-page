@@ -521,6 +521,7 @@ nav ul.show {
   animation-iteration-count: infinite;
   color: #fff;
   font-size: 4rem;
+  z-index: 3;
 }
 
 .fa-circle-up:hover {
